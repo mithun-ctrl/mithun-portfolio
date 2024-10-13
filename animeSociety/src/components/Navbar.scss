@@ -1,0 +1,252 @@
+$primary-background-color: #FFFFFF;
+$primary-text-color: #6200EE;
+$secondary-background-color: #B00020;
+$secondary-text-color: #000000;
+
+:root{
+    background-color: $primary-background-color;
+    text-rendering: optimizeSpeed;
+}
+
+header {
+    width: 100%;
+    background-color: rgba($primary-background-color, 0.95);
+}
+
+#box-navbar{
+    overflow: visible;
+    background-color: #ffffff00;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 5px 20px;
+    max-width: 1400px;
+    margin: 10px auto;
+    
+    #logo-box{
+        margin: 0 50px 0 100px;
+        padding: 0 20px;
+        #logo{
+            color: $primary-background-color;
+            font-size: 30px;
+            font-weight: 900;
+            text-decoration: none;
+            -webkit-text-stroke: $secondary-text-color 1px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            padding: 1px 2px 1px 5px;   
+            border: 2px solid $primary-background-color;
+            transition: 0.3s ease-in-out;
+
+            &:hover{
+                border: 2px solid $secondary-text-color;
+            }
+        }
+    }
+
+    #login-reg-box{
+        display: flex;
+        margin-right: 50px;
+        padding: 5px 20px 13px;
+        border-radius: 100px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        ul{
+            margin: 10px 8px 3px 8px;
+            display: flex;
+            background-color: $primary-background-color;
+            gap: 15px;
+            
+            li{
+                list-style: none;
+                a{
+                    max-width: fit-content;
+                    text-decoration: none;
+                    color: $secondary-text-color;
+                    position: relative;
+
+                    &:not(.register)::after {
+                        content: '';
+                        position: absolute;
+                        width: 0;
+                        height: 2px;
+                        bottom: -4px;
+                        left: 0;
+                        background-color: $primary-text-color;
+                        transition: width 0.3s ease;
+                    }
+
+                    &:not(.register):hover::after {
+                        width: 100%;
+                    }
+                }
+
+                .register{
+                    background-color: $secondary-text-color;
+                    color: $primary-background-color;
+                    padding: 11px;
+                    text-wrap: nowrap;
+                    border-radius: 100px;
+                    position: relative;
+                    right: -10%;
+                }
+            }
+        }
+    }
+
+    .nav-links{
+        display: flex;
+        border-radius: 100px;
+        padding: 13px 20px;
+        margin: 0 auto;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        
+        li{
+            flex-direction: row;
+            list-style: none;
+            margin: auto 20px;
+
+            a{
+                text-decoration: none;
+                color: $secondary-text-color;
+                transition: 0.4s;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 2px;
+                    bottom: -4px;
+                    left: 0;
+                    background-color: $primary-text-color;
+                    transition: width 0.3s ease;
+                }
+
+                &:hover{
+                    color: $primary-text-color;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+
+            }
+        }
+    }
+
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        
+        span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: $primary-text-color;
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+// .blue{
+//     background-color: #d22828;
+//     color: #598b13;
+// }
+
+@media screen and (max-width: 1200px) {
+    #box-navbar {
+        padding: 15px;
+        
+        #logo-box {
+            margin: 0 30px;
+        }
+        
+        .nav-links {
+            margin: 0 40px;
+            padding: 13px 15px;
+            
+            li {
+                margin: auto 15px;
+            }
+        }
+
+        #login-reg-box {
+            margin-right: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #box-navbar {
+        justify-content: space-between;
+        padding: 15px 20px;
+        
+        .mobile-menu-btn {
+            display: block;
+            order: 3;
+        }
+        
+        #logo-box {
+            order: 1;
+            margin: 0;
+        }
+        
+        .nav-links {
+            position: absolute;
+            top: 100%;
+            left: -100%;
+            width: 100%;
+            flex-direction: column;
+            background-color: $primary-background-color;
+            transition: 0.3s;
+            margin: 0;
+            padding: 20px;
+            border-radius: 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            
+            &.active {
+                left: 0;
+            }
+            
+            li {
+                margin: 15px 0;
+                text-align: center;
+            }
+        }
+        
+        #login-reg-box {
+            order: 2;
+            margin: 0;
+            
+            ul {
+                margin-top: 0;
+                
+                .register-li {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #box-navbar {
+        padding: 10px 15px;
+        
+        #logo-box #logo {
+            font-size: 18px;
+        }
+        
+        #login-reg-box {
+            padding: 5px 10px;
+            
+            ul {
+                gap: 10px;
+            }
+        }
+    }
+}

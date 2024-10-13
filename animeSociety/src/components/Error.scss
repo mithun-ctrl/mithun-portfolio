@@ -1,0 +1,90 @@
+$primary-background-color: #FFFFFF;
+$primary-text-color: #6200EE;
+$secondary-background-color: #B00020;
+$secondary-text-color: #000000;
+
+
+.container-error{
+    // background-color: #6200EE;
+    margin: 90px auto 150px auto;
+    display: flex;
+    .left-box-error{
+        margin-left: 7rem;
+        max-width: fit-content;
+        img{
+            width: 30vw;
+            height: 60vh;
+        }
+    }
+
+    .right-box-error{
+        max-width: 50vw;
+        margin-left: auto;
+        margin-right: 9rem;
+        
+        .error-404{ 
+            max-width: fit-content;
+            text-align: center;
+            // background-color: #000000;
+            min-height: 60vh;
+            img{
+                height: 40vh;
+                width: 45vw;
+            }
+
+            h1{
+                font-size: 20rem;
+                color: $primary-background-color;
+                -webkit-text-stroke: $secondary-text-color 2px;
+            }
+
+            h6{  
+                margin-top: 0rem;
+                font-size: 1.5rem;
+                font-weight: 400;
+                text-transform: capitalize;
+                max-width: fit-content;
+                margin: auto;
+            }
+            p{
+               width: 30vw;
+               margin: auto;
+               text-rendering: optimizeSpeed;
+               font-size: 14px;
+               font-weight: 400;
+            }
+
+            ul{
+                display: flex;
+                gap: 2rem;
+                max-width: fit-content;
+                margin: 2rem auto 0 auto;
+                li{
+                    max-width: fit-content;
+                    list-style: none;
+
+                    &:last-child{
+                       a{
+                        background-color: $primary-background-color;
+                        color: $secondary-text-color;
+                        border: 2px solid $secondary-text-color;
+                       }
+                    }
+                    
+                    a{  
+                        background-color: $secondary-text-color;
+                        text-decoration: none;
+                        color: $primary-background-color;
+                        font-size: 17px;
+                        padding: 10px 20px;
+                        gap:3rem;
+                        border: 2px solid $secondary-text-color;
+
+                        
+                    }
+                }
+            }
+
+        }
+    }
+}
