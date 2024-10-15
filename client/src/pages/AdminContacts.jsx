@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { useAuth } from "../store/auth";
 import { toast } from 'react-hot-toast';
 
-const ADMIN_CONTACTS_URL = "https://mithun-portfolio.onrender.com/api/admin/contacts";
+const ADMIN_CONTACTS_URL = "https://mithun-portfolio-production.up.railway.app/api/admin/contacts";
 
 export const AdminContacts = () => {
     const { authorizationToken } = useAuth();
@@ -27,7 +27,7 @@ export const AdminContacts = () => {
     };
 
     const deleteContacts = async (id) =>{
-        const DELETE_CONTACTS_URL = `http://localhost:5000/api/admin/contacts/delete/${id}`;
+        const DELETE_CONTACTS_URL = `https://mithun-portfolio-production.up.railway.app/api/admin/contacts/delete/${id}`;
        
         const response = await fetch(DELETE_CONTACTS_URL, {
             method: "DELETE",
