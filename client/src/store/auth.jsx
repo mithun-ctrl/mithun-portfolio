@@ -13,6 +13,8 @@ export const AuthProvider = ({ children }) =>{
 
     const [achievements ,setAchievements] = useState([]);
 
+    const [isLoading, setIsLoading] = useState(true);
+
     const authorizationToken = `Bearer ${token}`;
 
     const storeTokenInLS = (serverToken) =>{
@@ -30,6 +32,9 @@ export const AuthProvider = ({ children }) =>{
     };
 
     const userAuthentication = async () =>{
+
+        setIsLoading(true);
+        
         try {
             
             const response =await fetch(USER_URL,{
@@ -42,7 +47,9 @@ export const AuthProvider = ({ children }) =>{
             if(response.ok){
                 const responseData = await response.json();
                 setUser(responseData.userData);
-
+                setIsLoading(false);
+            }else{
+                setIsLoading(false);
             }
 
         } catch (error) {
@@ -84,7 +91,7 @@ export const AuthProvider = ({ children }) =>{
     }, []);
 
     return(
-        <AuthContext.Provider value={{isLoggedIn, storeTokenInLS, LogoutUser, user, achievements, authorizationToken }}>
+        <AuthContext.Provider value={{isLoggedIn, storeTokenInLS, LogoutUser, user, achievements, authorizationToken, isLoading }}>
 
             { children }
 
