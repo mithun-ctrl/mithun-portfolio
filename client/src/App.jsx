@@ -13,6 +13,7 @@ import { AdminLayout } from "./components/Layout/AdminLayout";
 import { AdminUsers } from "./pages/AdminUsers";
 import { AdminContacts } from "./pages/AdminContacts";
 import { ProtectedRoutes } from "./pages/ProtectedRoutes";
+import { AdminAccess } from "./pages/AdminAccess";
 
 const App = () => {
   return (
@@ -26,14 +27,18 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/achievement" element={<Achievement />} />
+            <Route path="/admin" element={<AdminLayout />} />
+            <Route path="/admin/users" element={<AdminUsers />} />
+            <Route path="/admin/contacts" element={<AdminContacts />} />
+            <Route path="/admin/access" element={<AdminAccess />} />
           </Route>
           <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout />} />
           <Route path="/register" element={<Register />} />
           <Route path="*" element={<Error />} />
-          <Route path="/admin" element={<AdminLayout />}/>
-            <Route path="/admin/users" element={<AdminUsers />} />
-            <Route path="/admin/contacts" element={<AdminContacts />} />
+          <Route path="/admin" element={<AdminLayout />} />
+          <Route path="/admin/users" element={<AdminUsers />} />
+          <Route path="/admin/contacts" element={<AdminContacts />} />
         </Routes>
         <Footer />
       </BrowserRouter>
