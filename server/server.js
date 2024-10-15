@@ -17,7 +17,7 @@ const _dirname = path.resolve();
 
 
 const corsOption = {
-    origin: 'http://localhost:5173',
+    origin: 'https://mithun-portfolio.onrender.com',
     methods: "GET, POST, PUT, DELETE, HEAD, PATCH",
     credentials: true,
 };
