@@ -1,8 +1,8 @@
 import "../components/Login.scss";
-import yuji from '../images/yuji.png';
-import google from '../images/google.png';
-import x from '../images/x.png';
-import facebook from '../images/facebook.png';
+import yuji from '../images/yuji.webp';
+import google from '../images/google.webp';
+import x from '../images/x.webp';
+import facebook from '../images/facebook.webp';
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
