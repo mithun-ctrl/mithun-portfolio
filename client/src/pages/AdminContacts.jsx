@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { useAuth } from "../store/auth";
 import { toast } from 'react-hot-toast';
 
-const ADMIN_CONTACTS_URL = "http://localhost:5000/api/admin/contacts";
+const ADMIN_CONTACTS_URL = "https://mithun-portfolio.onrender.com/api/admin/contacts";
 
 export const AdminContacts = () => {
     const { authorizationToken } = useAuth();
