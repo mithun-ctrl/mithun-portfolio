@@ -2,10 +2,10 @@
 import React from 'react';
 import './Footer.scss';
 import { NavLink } from 'react-router-dom'
-import facebook from './fimages/footer_facebook.png';
-import x from './fimages/footer_x.png';
-import linkedin from './fimages/footer_linkedin.png';
-import mail from './fimages/footer_mail.png';
+import facebook from './fimages/footer_facebook.webp';
+import x from './fimages/footer_x.webp';
+import linkedin from './fimages/footer_linkedin.webp';
+import mail from './fimages/footer_mail.webp';
 
 export const Footer = () => {
   return (
