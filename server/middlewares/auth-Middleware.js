@@ -10,7 +10,7 @@ const authMiddleware  = async (req, res, next) =>{
     }
 
     const jwtToken = token.replace("Bearer", "").trim();
-    console.log("token middleware", jwtToken)
+    // console.log("token middleware", jwtToken)
     
     try {
 
@@ -21,7 +21,7 @@ const authMiddleware  = async (req, res, next) =>{
             password: 0,
         })
         
-        console.log(userData);  
+        // console.log(userData);  
 
         req.user = userData;
         req.token = token;

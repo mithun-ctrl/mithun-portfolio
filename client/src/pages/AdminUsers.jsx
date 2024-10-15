@@ -20,7 +20,7 @@ export const AdminUsers = () => {
             });
 
             const responseData = await response.json();
-            console.log(`Users data ${responseData}`);
+            // console.log(`Users data ${responseData}`);
             setUsers(responseData);
         } catch (error) {
             console.log("Error fetching users:", error);
@@ -45,7 +45,7 @@ export const AdminUsers = () => {
 
         
         const responseData = await response.json();
-        console.log(`Users data after delete ${responseData}`);
+        // console.log(`Users data after delete ${responseData}`);
         
     };
 

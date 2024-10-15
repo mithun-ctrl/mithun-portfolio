@@ -58,11 +58,11 @@ export const Contact = () => {
                     message: "",
                 });
                 const responseData = await response.json();
-                console.log(responseData);
+                // console.log(responseData);
                 setShowSuccess(true);
             }
 
-            console.log(response);
+            // console.log(response);
 
         } catch (error) {
             console.log("contact: ", error);

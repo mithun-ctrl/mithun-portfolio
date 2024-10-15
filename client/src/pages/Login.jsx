@@ -35,7 +35,7 @@ export const Login = () => {
 
     const handleSubmission = async (e) => {
         e.preventDefault();
-        console.log(user)
+        // console.log(user);
 
         try {
 
@@ -56,11 +56,11 @@ export const Login = () => {
             if (response.ok) {
                 // alert("login successfull");
 
-                toast.success("Login Successfull!")
+                toast.success(`Login Successfull`)
 
                 storeTokenInLS(responseData.token);
 
-                setUser({ email: "", password: "" });
+                setUser({ email: "", password: "", });
                 navigate("/");
             } else {
                 toast.error(responseData.extraError ? responseData.extraError :

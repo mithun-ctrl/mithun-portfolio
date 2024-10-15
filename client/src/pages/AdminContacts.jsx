@@ -19,7 +19,7 @@ export const AdminContacts = () => {
             });
 
             const responseData = await response.json();
-            console.log(`Users data ${responseData}`);
+            // console.log(`Users data ${responseData}`);
             setContacts(responseData);
         } catch (error) {
             console.log("Error fetching users:", error);
@@ -44,7 +44,7 @@ export const AdminContacts = () => {
 
         
         const responseData = await response.json();
-        console.log(`Users data after delete ${responseData}`);
+        // console.log(`Users data after delete ${responseData}`);
         
     };
 

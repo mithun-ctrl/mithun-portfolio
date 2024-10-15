@@ -12,7 +12,7 @@ const home = async (req, res) =>{
 
 const register = async (req, res) =>{
     try {
-        console.log(req.body);
+        // console.log(req.body);
 
         const {username, email, password} = req.body;
 
@@ -85,7 +85,7 @@ const user = async (req, res) =>{
         
         const userData = req.user;
 
-        console.log(userData);
+        // console.log(userData);
         
         return res.status(200).json({userData});
 

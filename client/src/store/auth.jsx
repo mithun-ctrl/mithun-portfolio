@@ -65,7 +65,7 @@ export const AuthProvider = ({ children }) =>{
 
                 const responseData = await response.json();
                
-                console.log(responseData.msg);
+                // console.log(responseData.msg);
                 setAchievements(responseData.msg);
             }
 

@@ -8,8 +8,13 @@ const contactRoute = require("./router/contact-router");
 const achievementRoute = require("./router/achievement-router");
 const cors = require("cors");
 const adminRoute = require("./router/admin-router");
+const path = require("path");
 
 //handdling cors error
+
+
+const _dirname = path.resolve();
+
 
 const corsOption = {
     origin: 'http://localhost:5173',
@@ -27,6 +32,11 @@ app.use("/api/auth", authRoute);
 app.use("/api/form", contactRoute);
 app.use("/api/data", achievementRoute);
 app.use("/api/admin", adminRoute);
+
+app.use(express.static(path.join(_dirname, "/client/dist")));
+app.get('*', (_, res) =>{
+    res.sendFile(path.resolve(_dirname, "client", "dist", "index.html"));
+});
 
 app.use(errorMiddleware);
 
