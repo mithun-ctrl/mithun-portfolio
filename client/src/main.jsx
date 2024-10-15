@@ -40,7 +40,7 @@ createRoot(document.getElementById('root')).render(
           success:{
             style: {
               padding: '10px',
-              backgroundColor: 'green',
+              backgroundColor: 'rgb(120, 157, 188)',
               color: 'white',
               width: 220,
               height: 32,

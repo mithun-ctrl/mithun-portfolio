@@ -2,11 +2,13 @@
 @tailwind components;
 @tailwind utilities; */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
 }
-html{
+
+html {
   scroll-behavior: smooth;
 }
 
@@ -14,68 +16,127 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 500;
+  /* overflow: hidden; */
 }
 
+#root {
+  overflow: hidden;
+}
 
 /* toastyfy */
 
+/* admin page  */
 
-.layout-container{
+.admin-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 50px 0px;
 
-  .layout-nav{
+}
 
-    margin-left: 40px;
+.admin-users,
+.admin-contacts,
+.admin-admins {
+  width: 20vw;
+  min-height: 60vh;
+  margin: auto;
+  transition: 0.3s ease-out;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 10px;
 
-    ul{
-      
-      display: flex;
-      gap: 30px;
+  &:hover {
 
-      li{
-        list-style: none;
+    transform: translateY(-20px);
 
+  }
 
-        .faMessage{
-          position: relative;
-          top: 10%;position: relative;
-          top: 12%;
-        }
+  figure {
 
-        .faHome{
-          position: relative;
-          top: 6%;
-        }
+    border-bottom: 2px solid #789DBC;
 
-        a{
-          text-decoration: none;
-          font-size: 17px;
-          position: relative;
-          /* margin-left: 20px; */
-          color: #000000;
-          margin-left: 7px;
-          
-        }
-      }
+    img {
+
+      width: 20vw;
+
     }
+
+  }
+  .users-text, .contacts-text, .admins-text{
+
+    margin-top: 10px;
+    
+    p{
+      font-size: 20px;
+      font-weight: 500; 
+      text-align: center;
+    }
+
+  }
+
+
+
+}
+
+.admin-users{
+
+  figure{
+
+    overflow: hidden;
+
+    img{
+
+      width: 20vw;
+      height: 29vh;
+
+    }
+
   }
 }
 
+.admin-btn{
+  max-width: fit-content;
+  margin: 100px auto 0px auto;
+  a{
+    text-decoration: none;
+    background-color: #789DBC;
+    padding: 12px 25px;
+    color: #ffffff;
+    border: 2px solid #789DBC;
+    transition: 0.2s ease-in;
+    border-radius: 5px;
+   
+
+    &:hover{
+      background-color: #ffffff;
+      border: 2px solid #789DBC;
+      color: #789DBC;
+    }
+  }
+
+}
+
+
+
 
 /* admin users page scss  */
-.admin-user-container{
+.admin-user-container {
   margin-top: 50px;
   margin-bottom: 100px;
 
-  .admin-user-heading{
+  .admin-user-heading {
     margin-bottom: 30px;
     margin-left: 125px;
-    span{
+
+    span {
       font-size: 50px;
       font-weight: 800;
       text-transform: uppercase;
       color: #ffffff;
       -webkit-text-stroke: 1px #000000;
-      
+
     }
   }
 }
@@ -124,8 +185,8 @@ body {
 /* #B00020 red */
 /* #6200EE blue */
 
-.btn-table{
-  background-color: #6300eec6;
+.btn-table {
+  background-color: #789DBC;
   color: #ffffff;
   padding: 7px 15px;
   font-family: "Poppins", sans-serif;
@@ -134,27 +195,29 @@ body {
   cursor: pointer;
   border-radius: 7px;
   transition: 0.1s;
-  border: 3px solid #ffffff;
+  border: 2px solid #789DBC;
 
-  &:hover{
-    background-color: #6200EE;
+  &:hover {
+    background-color: #ffffff;
+    border: 2px solid #789DBC;
+    color: #789DBC;
   }
 
-  &:focus{
-    border: 3px solid #8a86cc ;
+  &:focus {
+    border: 3px solid #8a86cc;
     padding: 7px 15px;
   }
 }
 
 
 
-.btn-update-user{
+.btn-update-user {
   background-color: #00000025;
   color: #000000;
   /* border: 2px solid #000000; */
   transition: 0.1s;
 
-  &:hover{
+  &:hover {
     background-color: #000000;
     color: #ffffff;
   }

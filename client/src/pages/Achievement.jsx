@@ -16,27 +16,27 @@ export const Achievement = () => {
                     return (
                         <div className="container-achievement" key={index}>
                             <div className="card">
-                                <div className="img-achievement">
-                                    <img src={certificateImagePath} alt={`Certificate for ${achievement}`} />
+                                <div className="img-achievement" >
+                                    <img data-aos="fade-down-right" data-aos-duration="1200" src={certificateImagePath} alt={`Certificate for ${achievement}`} />
                                 </div>
-                                <div className="details-box">
+                                <div data-aos="fade-up-left" data-aos-duration="1200" className="details-box">
                                     <h1>{achievement}</h1>
-                                    <div className="course">
+                                    {/* <div className="course">
                                         <p><span>Course: </span>{course}</p>
-                                    </div>
+                                    </div> */}
                                     <div className="provider">
                                         <p><span>From: </span>{provider}</p>
                                     </div>
-                                    <div className="duration">
+                                    {/* <div className="duration">
                                         <p><span>Duration: </span>{duration}</p>
                                     </div>
                                     <div className="project">
                                         <p><span>Project: </span>{project}</p>
-                                    </div>
+                                    </div> */}
                                     <div className="description">
                                         <p><span>About: </span>{description}</p>
                                     </div>
-                                    <div className="download-certificate">
+                                    <div data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200" className="download-certificate">
                                         <a href={certificateImagePath} download={certificateImage}>
                                             Download Certificate
                                         </a>
