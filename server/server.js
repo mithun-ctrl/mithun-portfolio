@@ -41,7 +41,7 @@ app.get('*', (_, res) =>{
 app.use(errorMiddleware);
 
 connectDatabase().then(() =>{
-const PORT = 5000;
+const PORT = process.env.port || 5000;
     app.listen(5000, () => {
         console.log(`Server Runinig on ${PORT}`);
     });
