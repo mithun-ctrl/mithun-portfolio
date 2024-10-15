@@ -10,7 +10,7 @@ import { useAuth } from "../store/auth";
 import { toast } from 'react-hot-toast';
 
 
-const URL = "https://mithun-portfolio.onrender.com/api/auth/login";
+const URL = "https://mithun-portfolio-production.up.railway.app/api/auth/login";
 
 export const Login = () => {
 
