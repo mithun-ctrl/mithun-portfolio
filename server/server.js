@@ -43,6 +43,6 @@ app.use(errorMiddleware);
 connectDatabase().then(() =>{
 const port = process.env.PORT || 5000;
     app.listen(port, () => {
-        console.log(`Server Runinig on ${PORT}`);
+        console.log(`Server Runinig on ${port}`);
     });
 });
