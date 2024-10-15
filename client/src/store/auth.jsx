@@ -2,8 +2,8 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 export const AuthContext = createContext();
 
-const USER_URL = "https://mithun-portfolio.onrender.com/api/auth/user";
-const ACHIEVEMENTS_URL = "https://mithun-portfolio.onrender.com/api/data/achievement";
+const USER_URL = "https://mithun-portfolio-production.up.railway.app/api/auth/user";
+const ACHIEVEMENTS_URL = "https://mithun-portfolio-production.up.railway.app/api/data/achievement";
 
 export const AuthProvider = ({ children }) =>{
 
