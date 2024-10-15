@@ -1,8 +1,8 @@
 import '../components/About.scss';
-import introduction from '../images/introduction.png';
-import education from '../images/education.png';
-import skill from '../images/skill.png';
-import hobby from '../images/hobby.png';
+import introduction from '../images/introduction.webp';
+import education from '../images/education.webp';
+import skill from '../images/skill.webp';
+import hobby from '../images/hobby.webp';
 
 
 export const About = () => {
