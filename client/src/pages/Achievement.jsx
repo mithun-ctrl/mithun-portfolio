@@ -11,7 +11,7 @@ export const Achievement = () => {
                     const { achievement, description, provider, project, course, duration, certificateImage } = curElem;
 
                     // Use local file path to display the certificate
-                    const certificateImagePath = `/certificates/${certificateImage}`;
+                    const certificateImagePath = `/certificates-images/${certificateImage}`;
 
                     return (
                         <div className="container-achievement" key={index}>
