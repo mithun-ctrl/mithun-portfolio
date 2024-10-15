@@ -1,13 +1,30 @@
-import { NavLink, Outlet } from 'react-router-dom';
-import { FaUser } from "react-icons/fa";
-import { FaMessage } from "react-icons/fa6";
-import users from './layout-images/users.png';
-import contacts from './layout-images/contacts.png';
-import admins from './layout-images/admin.png';
+import { Navigate, NavLink, Outlet } from 'react-router-dom';
+import { useEffect } from 'react';
+import users from './layout-images/users.webp';
+import contacts from './layout-images/contacts.webp';
+import admins from './layout-images/admin.webp';
+import { useAuth } from '../../store/auth';
+import { toast } from 'react-hot-toast';
 
 
 
 export const AdminLayout = () => {
+
+    const { user, isLoading } = useAuth();
+
+    useEffect(() => {
+        if (!isLoading && !user.isAdmin) {
+            toast.error("You are not admin");
+        }
+    }, [user, isLoading]);
+
+    if (isLoading) {
+        return <h1>Loading...</h1>
+    }
+
+    if (!user.isAdmin) {
+        return <Navigate to="/" />
+    }
 
     return (
         <>
