@@ -1,5 +1,5 @@
 import '../components/Home.scss';
-import character from '../images/character.png';
+import character from '../images/character.webp';
 import { NavLink } from 'react-router-dom';
 
 
