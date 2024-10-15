@@ -1,8 +1,7 @@
 import '../components/Error.scss';
 import { NavLink } from 'react-router-dom';
-import error from '../images/error.png';
-import notFound from '../images/404.png';
-
+import error from '../images/error.webp';
+import notFound from '../images/404.webp';
 
 
 export const Error = () =>{
