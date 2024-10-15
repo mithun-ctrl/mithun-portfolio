@@ -17,7 +17,7 @@ const _dirname = path.resolve();
 
 
 const corsOption = {
-    origin: 'https://mithun-portfolio.onrender.com',
+    origin: 'https://mithun-portfolio-production.up.railway.app',
     methods: "GET, POST, PUT, DELETE, HEAD, PATCH",
     credentials: true,
 };
