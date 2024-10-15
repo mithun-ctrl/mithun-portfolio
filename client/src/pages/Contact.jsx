@@ -1,5 +1,5 @@
 import '../components/Contact.scss';
-import contactImage from '../images/contact.png';
+import contactImage from '../images/contact.webp';
 import { useState } from 'react';
 import { useAuth } from '../store/auth';
 import { toast } from 'react-hot-toast';
