@@ -3,7 +3,7 @@ import { useAuth } from "../store/auth";
 import { toast } from 'react-hot-toast';
 // import AdminLayout from "../components/Layout/AdminLayout";
 
-const ADMIN_USERS_URL = "http://localhost:5000/api/admin/users";
+const ADMIN_USERS_URL = "https://mithun-portfolio.onrender.com/api/admin/users";
 
 export const AdminUsers = () => {
     const { authorizationToken } = useAuth();
@@ -28,7 +28,7 @@ export const AdminUsers = () => {
     };
 
     const deleteUser = async (id) =>{
-        const DELETE_USERS_URL = `http://localhost:5000/api/admin/users/delete/${id}`;
+        const DELETE_USERS_URL = `https://mithun-portfolio.onrender.com/api/admin/users/delete/${id}`;
        
         const response = await fetch(DELETE_USERS_URL, {
             method: "DELETE",
