@@ -11,7 +11,7 @@ import { toast } from 'react-hot-toast';
 import AOS from 'aos';
 AOS.init();
 
-const URL = "https://mithun-portfolio.onrender.com/api/auth/register";
+const URL = "https://mithun-portfolio-production.up.railway.app/api/auth/register";
 
 export const Register = () => {
 
