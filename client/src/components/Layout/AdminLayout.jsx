@@ -60,7 +60,7 @@ export const AdminLayout = () => {
                     </div>
 
                     <div className="admin-btn">
-                        <NavLink to="/admin/users">
+                        <NavLink to="/admin/access">
                             Admins
                         </NavLink>
                     </div>
