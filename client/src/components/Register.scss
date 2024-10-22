@@ -1,27 +1,33 @@
 $primary-background-color: #FFFFFF;
 $primary-text-color: #6200EE;
 $secondary-background-color: #B00020;
-$secondary-text-color: #000000;
+$secondary-text-color: #7e2828;
 
 
 
-.container-register{
+.container-register {
     background-color: $primary-background-color;
-    min-height: 80vh;
-    max-width: 70vw;
-    margin: 50px auto;
+    max-height: 72vh;
+    max-width: 33vw;
+    margin: 70px auto 100px auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    // animation: myAnim 3s ease -1s 1 normal backwards;
-    box-shadow: 0px 0px 20px 0px #0000002d;
+    box-shadow: 0px 2px 20px -9px $secondary-text-color;
     font-family: "Poppins", sans-serif;
+    border-radius: 15px;
 
-
-    .box-reg-left{
+    .box-reg-left {
         background-color: $primary-background-color;
-        min-height: 80vh;
-        max-width: 40vw;
+        min-height: 72vh;
+        width: 33vw;
         margin-left: 0px;
+        border-radius: 15px;
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
         input {
             width: 18vw;
             outline: none;
@@ -38,124 +44,70 @@ $secondary-text-color: #000000;
                 left: 0;
                 font-family: "Poppins", sans-serif;
             }
-            &:focus{
+
+            &:focus {
                 border: 2px solid #c49cfb;
             }
         }
 
-        h1{
+        h1 {
             margin: auto;
             margin-top: 20px;
             max-width: fit-content;
             font-weight: 700;
             font-size: 35px;
+            color: $secondary-text-color;
         }
 
-        .reg-form{
+        .reg-form {
             margin-top: 50px;
-            .username{
-                max-width: fit-content;
-                margin: auto;
-                margin-bottom: 40px;
-            }
-    
-            .reg-email{
-                max-width: fit-content;
-                margin: auto;
-                margin-bottom: 40px;
-            }
-            .reg-password{
-                max-width: fit-content;
-                margin: auto;
-                margin-bottom: 40px;
-            }
-            .reg-btn{
-                max-width: fit-content;
-                margin: auto;
 
-                .rbtn{
-                    padding: 6px 25px;
-                    background-color: $primary-background-color;
-                    color: $secondary-text-color;
-                    border: 2px solid $secondary-text-color;
-                    border-radius: 12px;
+            .username {
+                max-width: fit-content;
+                margin: auto;
+                margin-bottom: 40px;
+            }
+
+            .reg-email {
+                max-width: fit-content;
+                margin: auto;
+                margin-bottom: 40px;
+            }
+
+            .reg-password {
+                max-width: fit-content;
+                margin: auto;
+                margin-bottom: 40px;
+            }
+
+            .reg-btn {
+                max-width: 30%;
+                margin: 10px auto 0px auto;
+
+                .rbtn {
+                    padding: 7px 20px;
+                    color: $primary-background-color;
+                    border-radius: 5px;
                     font-size: 20px;
+                    width: 100%;
                     font-family: "Poppins", sans-serif;
-                    font-weight: 500;
-                    transition: 0.5s;
+                    background: linear-gradient(to right,
+                            #000000 0%,
+                            #7e2828 50%,
+                            #000000 50%,
+                            #7e2828 100%);
+                    background-size: 200% 100%;
+                    background-position: 0% 0%;
+                    transition: background-position 0.3s ease-in-out;
 
-                    &:hover{
+                    &:hover {
                         cursor: pointer;
-                        border: 2px solid $secondary-text-color;
-                        background-color: $secondary-text-color;
                         color: $primary-background-color;
+                        background-position: 100% 0%;
                     }
                 }
             }
         }
     }
-
-    .box-reg-right{
-        margin-left: 0px;
-        background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.782), rgba(24, 25, 67, 0.884));
-        background-color: $secondary-text-color;
-        min-height: 80vh;
-        max-width: 40vw;
-
-        img{
-            image-rendering: optimizeQuality;
-            background-size: cover;
-            background-position: top;
-            max-width: 30vw;
-            max-height: 70vh;
-            margin-left: 140px;
-            margin-top: 50px;
-        }
-        
-    }
-
-    .social-media-reg{
-        margin-top: 40px;
-        max-width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-        ul{
-            height: 8vh;
-            max-width: fit-content;
-            margin-top: 15px;
-            margin-left: auto;
-            margin-right: auto;
-            li{
-                margin-top: 20px;
-                display: inline-block;
-                margin-left: 20px;
-                margin-right: 20px;
-                list-style: none;
-                padding: 0 10px;
-                a{
-                    img{
-                        width: 30px;
-                        height: 30px;
-                    }
-                }
-            }
-        }
-
-        .heading{
-            margin-top: 10px;
-            max-width: fit-content;
-            margin: auto;
-
-            p{
-                span{
-                    font-weight: 600;
-                }
-            }
-        }
-        
-    }
-
-
-
 
 }
