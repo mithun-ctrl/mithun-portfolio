@@ -15,16 +15,16 @@ export const About = () => {
         <section>
             <div className="container-introduction">
                 <div className="introduction-image-box">
-                    <img src={introduction} alt="introduction" data-aos="zoom-out-down" data-aos-duration="1000" />
+                    <img src={introduction} alt="introduction" />
                 </div>
 
                 <div className="introduction-text-box">
 
-                    <div className="introduction-heading" data-aos="fade-down-left" data-aos-duration="900">
+                    <div className="introduction-heading" >
                         <h1>Introduction</h1>
                     </div>
 
-                    <div className="introduction-para" data-aos="fade-up-left" data-aos-duration="900">
+                    <div className="introduction-para" >
                         <p>
                             Hi, I'm Mithun Yadav, a passionate Full Stack Developer
                             with a focus on creating dynamic and responsive web applications.
@@ -41,11 +41,11 @@ export const About = () => {
 
             <div className="container-introduction">
                 <div className="education-text-box">
-                    <div className="education-heading" data-aos="fade-down-left" data-aos-duration="900">
+                    <div className="education-heading" >
                         <h1>Education</h1>
                     </div>
 
-                    <div className="education-para" data-aos="fade-up-left" data-aos-duration="900">
+                    <div className="education-para" >
                         <p>
                             I completed my high school in 2019 from the CBSE board,
                             achieving 82.6% marks. Later, I completed my secondary
@@ -56,7 +56,7 @@ export const About = () => {
                     </div>
                 </div>
                 <div className="education-image-box">
-                    <img src={education} alt="education" data-aos="zoom-out-down" data-aos-duration="1000" />
+                    <img src={education} alt="education"  />
                 </div>
             </div>
 
@@ -64,20 +64,20 @@ export const About = () => {
 
             <div className="container-skill">
                 <div className="skill-image-box">
-                    <img src={skill} alt="skill" data-aos="zoom-out-down" data-aos-duration="1000" />
+                    <img src={skill} alt="skill"  />
                 </div>
 
                 <div className="skill-text-box">
-                    <div className="skill-heading" data-aos="fade-down-left" data-aos-duration="900">
+                    <div className="skill-heading" >
                         <h1>Skills</h1>
                     </div>
 
-                    <div className="skill-para" data-aos="fade-up-left" data-aos-duration="900">
+                    <div className="skill-para">
                         <div className="skills-container">
                             {skills.map((skill, index) => (
                                 <div className="skill-box" key={index} >
-                                    <div className="skill-title" data-aos = "zoom-in-down"  data-aos-delay="300" data-aos-duration="900" >{skill.name}</div>
-                                    <div className="skill-circle" data-aos = "zoom-in-up"  data-aos-delay="300" data-aos-duration="900" >
+                                    <div className="skill-title" >{skill.name}</div>
+                                    <div className="skill-circle" >
                                         <svg>
                                             <circle cx="70" cy="70" r="70" />
                                             <circle 
@@ -105,11 +105,11 @@ export const About = () => {
             <div className="container-hobby">
                 <div className="hobby-text-box">
 
-                    <div className="hobby-heading" data-aos="fade-down-left" data-aos-duration="900">
+                    <div className="hobby-heading">
                         <h1>Hobby</h1>
                     </div>
 
-                    <div className="hobby-para" data-aos="fade-up-left" data-aos-duration="900">
+                    <div className="hobby-para" >
                         <p>
                             In my free time I enjoy playing role-play games and watching isekai anime.
                             Both let me explore imaginative worlds and exciting adventures,
@@ -120,7 +120,7 @@ export const About = () => {
                     </div>
                 </div>
                 <div className="hobby-image-box">
-                    <img src={hobby} alt="hobby" data-aos="zoom-out-down" data-aos-duration="1000" />
+                    <img src={hobby} alt="hobby" />
                 </div>
             </div>
         </section>
