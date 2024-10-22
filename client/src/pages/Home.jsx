@@ -9,16 +9,16 @@ export const Home = () => {
             <div className="container-home">
                 <div className="hero">
                     <div className="hero-content">
-                        <h1 className="hero-title" data-aos="fade-right" data-aos-duration="1200">MITHUN YADAV</h1>
-                        <p className="hero-text" data-aos="zoom-out" data-aos-duration="1200">
+                        <h1 className="hero-title">MITHUN YADAV</h1>
+                        <p className="hero-text">
                         Hi, I'm a Full Stack Developer with a passion for 
                         building dynamic and responsive web applications. 
                         </p>
-                        <NavLink to="/about" className="cta-button" data-aos="fade-up" data-aos-duration="900">
+                        <NavLink to="/about" className="cta-button">
                             KNOW MORE
                         </NavLink>
                     </div>
-                    <div className="hero-image-container" data-aos="fade-down" data-aos-duration="1200" >
+                    <div className="hero-image-container">
                         <img src={character} alt="Beautiful woman with crown" />
                     </div>
                 </div>
