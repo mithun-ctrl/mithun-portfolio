@@ -12,7 +12,7 @@ export const Home = () => {
                         <h1 className="hero-title">MITHUN YADAV</h1>
                         <p className="hero-text">
                         Hi, I'm a Full Stack Developer with a passion for 
-                        building dynamic and responsive web applications. 
+                        building responsive web applications. 
                         </p>
                         <NavLink to="/about" className="cta-button">
                             KNOW MORE
