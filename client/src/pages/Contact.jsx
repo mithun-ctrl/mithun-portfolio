@@ -85,8 +85,7 @@ export const Contact = () => {
                             <input
                                 type="text"
                                 id='username-cont'
-                                required
-                                autoComplete='off'
+                                required                               
                                 name='username'
                                 value={contact.username}
                                 onChange={handleInput}
@@ -97,8 +96,7 @@ export const Contact = () => {
                             <input
                                 type="email"
                                 id='email-cont'
-                                required
-                                autoComplete='off'
+                                required                                
                                 name='email'
                                 value={contact.email}
                                 onChange={handleInput}
@@ -112,8 +110,7 @@ export const Contact = () => {
                                 cols={50}
                                 rows={7}
                                 placeholder='Message Here....'
-                                required
-                                autoComplete='off'
+                                required                                
                                 value={contact.message}
                                 onChange={handleInput}
                             />
