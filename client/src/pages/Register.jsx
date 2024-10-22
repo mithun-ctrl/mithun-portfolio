@@ -1,10 +1,5 @@
 import '../components/Register.scss';
-import zumpakto from '../images/zumpakto.webp';
-import google from '../images/google.webp';
-import x from '../images/x.webp';
-import facebook from '../images/facebook.webp';
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../store/auth';
 import { toast } from 'react-hot-toast';
@@ -72,38 +67,38 @@ export const Register = () => {
 
     return (
         <section>
-            <div className="container-register" data-aos="zoom-in-down" data-aos-duration="1200">
+            <div className="container-register">
                 <div className="box-reg-left">
                     <h1>Sign-Up</h1>
                     <div className='reg-form'>
                         <form method='POST' onSubmit={handleSubmission}>
                             <div className="username">
+                                <label htmlFor="username">Username</label>
                                 <input
                                     name="username"
                                     type='text'
-                                    id='usernmae'
-                                    placeholder='Username'
-                                    required                                    
+                                    id='usernmae'                                    
+                                    required
                                     values={user.username}
                                     onChange={handleInput}
                                 ></input>
                             </div>
                             <div className="reg-email">
+                                <label htmlFor="email">Email</label>
                                 <input
                                     name="email"
-                                    type='email'
-                                    placeholder='Email'
-                                    required                                    
+                                    type='email'                                    
+                                    required
                                     id='email-reg'
                                     values={user.email}
                                     onChange={handleInput}
                                 ></input>
                             </div>
                             <div className="reg-password">
+                                <label htmlFor="password">Password</label>
                                 <input
                                     name="password"
-                                    type='password'
-                                    placeholder='Password'
+                                    type='password'                                   
                                     id='password-reg'                                    
                                     required
                                     values={user.password}
@@ -118,33 +113,6 @@ export const Register = () => {
                             </div>
                         </form>
                     </div>
-                    <div className="social-media-reg">
-                        <div className='heading'>
-                            <p> <span>━━━━━━━━━━━━ </span>Other Sign-Up <span>━━━━━━━━━━━━━</span></p>
-                        </div>
-
-                        <ul>
-                            <li>
-                                <NavLink to='#'>
-                                    <img src={google} alt='google-login'></img>
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to='#'>
-                                    <img src={x} alt='google-login'></img>
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to='#'>
-                                    <img src={facebook} alt='google-login'></img>
-                                </NavLink>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-                <div className="box-reg-right">
-                    <img src={zumpakto} alt="" />
                 </div>
             </div>
         </section>
