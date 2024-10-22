@@ -5,7 +5,7 @@ import './index.css'
 import { AuthProvider } from './store/auth.jsx'
 // import { ToastContainer } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
-
+import 'aos/dist/aos.css';
 import { Toaster } from 'react-hot-toast';
 
 createRoot(document.getElementById('root')).render(
