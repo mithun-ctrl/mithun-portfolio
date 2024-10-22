@@ -90,8 +90,7 @@ export const Login = () => {
                                 <input
                                     type="email"
                                     placeholder="Email"
-                                    required
-                                    autoComplete="off"
+                                    required                                    
                                     name="email"
                                     value={user.email}
                                     onChange={handleInput}
@@ -102,8 +101,7 @@ export const Login = () => {
                                     type="password"
                                     placeholder="Password"
                                     required
-                                    name="password"
-                                    autoComplete="off"
+                                    name="password"                                    
                                     value={user.password}
                                     onChange={handleInput}
                                 ></input>
