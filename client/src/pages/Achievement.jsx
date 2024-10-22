@@ -17,9 +17,9 @@ export const Achievement = () => {
                         <div className="container-achievement" key={index}>
                             <div className="card">
                                 <div className="img-achievement" >
-                                    <img data-aos="fade-down-right" data-aos-duration="1200" src={certificateImagePath} alt={`Certificate for ${achievement}`} />
+                                    <img src={certificateImagePath} alt={`Certificate for ${achievement}`} />
                                 </div>
-                                <div data-aos="fade-up-left" data-aos-duration="1200" className="details-box">
+                                <div  className="details-box">
                                     <h1>{achievement}</h1>
                                     {/* <div className="course">
                                         <p><span>Course: </span>{course}</p>
@@ -36,7 +36,7 @@ export const Achievement = () => {
                                     <div className="description">
                                         <p><span>About: </span>{description}</p>
                                     </div>
-                                    <div data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200" className="download-certificate">
+                                    <div className="download-certificate">
                                         <a href={certificateImagePath} download={certificateImage}>
                                             Download Certificate
                                         </a>
