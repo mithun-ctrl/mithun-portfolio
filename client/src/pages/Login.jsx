@@ -1,10 +1,5 @@
 import "../components/Login.scss";
-import yuji from '../images/yuji.webp';
-import google from '../images/google.webp';
-import x from '../images/x.webp';
-import facebook from '../images/facebook.webp';
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../store/auth";
 import { toast } from 'react-hot-toast';
@@ -54,9 +49,7 @@ export const Login = () => {
             const responseData = await response.json();
 
             if (response.ok) {
-                // alert("login successfull");
-
-                toast.success(`Login Successfull`)
+                toast.success(`Welcome, ${user.email.split('@')[0]}`);
 
                 storeTokenInLS(responseData.token);
 
@@ -64,9 +57,9 @@ export const Login = () => {
                 navigate("/");
             } else {
                 toast.error(responseData.extraError ? responseData.extraError :
-                    responseData.message,{
-                        progressStyle: { background: '#000000' },
-                    }
+                    responseData.message, {
+                    progressStyle: { background: '#000000' },
+                }
                 );
             }
 
@@ -75,69 +68,44 @@ export const Login = () => {
         }
     }
     return (
-        <section>
-            <div className="container-login">
-                <div className="box-left">
-                    <img className="img-left" src={yuji} alt="Yuji"></img>
-                    <h1>Access <span className="my">My</span> <span className="portfolio">Portfolio</span></h1>
-                </div>
 
-                <div className="box-right">
-                    <h1>Login</h1>
-                    <div className="form-login">
-                        <form action="" method="POST" onSubmit={handleSubmission}>
-                            <div className="email">
-                                <input
-                                    type="email"
-                                    placeholder="Email"
-                                    required                                    
-                                    name="email"
-                                    value={user.email}
-                                    onChange={handleInput}
-                                ></input>
-                            </div>
-                            <div className="password">
-                                <input
-                                    type="password"
-                                    placeholder="Password"
-                                    required
-                                    name="password"                                    
-                                    value={user.password}
-                                    onChange={handleInput}
-                                ></input>
-                            </div>
-                            <div className="forget-password">
-                                <a href="#">reset password?</a>
-                            </div>
-                            <div className="btn-login">
-                                <button
-                                    className="btn"
-                                >Login</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div className="social-login">
-                        <p><span>━━━━━━━━━</span> Other login <span>━━━━━━━━━━</span></p> {/* I'm little bit lazy at my work!  */}
-                        <ul>
-                            <li>
-                                <NavLink to="#">
-                                    <img src={google} alt="google"></img>
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="#">
-                                    <img src={x} alt="x"></img>
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="#">
-                                    <img src={facebook} alt="facebook"></img>
-                                </NavLink>
-                            </li>
-                        </ul>
-                    </div>
+        <div className="container-login">
+            <div className="box">
+                <h1>Login</h1>
+                <div className="form-login">
+                    <form action="" method="POST" onSubmit={handleSubmission}>
+                        <div className="email">
+                            <label for='email'>Email</label>
+                            <input
+                                type="email"
+                                required                                
+                                name="email"
+                                value={user.email}
+                                onChange={handleInput}
+                            ></input>
+                        </div>
+                        <div className="password">
+                            <label for='email'>Password</label>
+                            <input
+                                type="password"
+                                required
+                                name="password"                               
+                                value={user.password}
+                                onChange={handleInput}
+                            ></input>
+                        </div>
+                        <div className="forget-password">
+                            <a href="#" aria-disabled>reset passowrd</a>
+                        </div>
+                        <div className="btn-login">                            
+                            <button
+                                className="btn"
+                            >Login</button>                           
+                        </div>
+                    </form>
                 </div>
             </div>
-        </section>
+        </div>
+
     )
 }
