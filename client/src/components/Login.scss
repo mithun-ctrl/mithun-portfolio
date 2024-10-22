@@ -113,3 +113,76 @@ $secondary-text-color: #7e2828;
         }
     }
 }
+
+@media only screen and (max-width: 900px){
+
+    .container-login {
+        max-width: 43vw;
+
+        .box{
+            width: 43vw;
+
+
+            input{
+                width: 28vw;
+            }
+
+            .forget-password{
+                margin: 20px 0px 0px 50px
+            }
+            
+        }
+
+    }
+
+
+}
+
+@media only screen and (max-width: 800px){
+
+    .container-login {
+        max-width: 46vw;
+
+        .box{
+            width: 46vw;
+
+
+            input{
+                width: 28vw;
+            }
+
+            .forget-password{
+                margin: 20px 0px 0px 60px
+            }
+            
+        }
+
+    }
+
+
+}
+@media only screen and (max-width: 700px){
+
+    .container-login {
+        
+        
+        max-width: 50vw;
+
+        .box{
+            width: 50vw;
+
+
+            input{
+                width: 28vw;
+            }
+
+            .forget-password{
+                margin: 20px 0px 0px 65px
+            }
+            
+        }
+
+    }
+
+
+}
