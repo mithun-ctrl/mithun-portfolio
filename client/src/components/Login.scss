@@ -114,22 +114,35 @@ $secondary-text-color: #7e2828;
     }
 }
 
-@media only screen and (max-width: 1080px){
+@media only screen and (max-width: 320px) {
 
     .container-login {
-        max-width: 43vw;
+        max-width: 100vw;
+        margin-top: 20px;
+        margin-bottom: 100px;
+
+        box-shadow: none;
 
         .box{
-            width: 43vw;
-
+            width: 100vw;
+            
 
             input{
-                width: 28vw;
+                width: 70vw;
             }
 
             .forget-password{
                 margin: 20px 0px 0px 50px
             }
+
+            .btn{
+                transition: 0.2s ease;
+
+                &:focus{
+                    border: 3.5px solid #c49cfb;
+                }
+            }
+
             
         }
 
@@ -138,51 +151,51 @@ $secondary-text-color: #7e2828;
 
 }
 
-@media only screen and (max-width: 800px){
+// @media only screen and (max-width: 800px){
 
-    .container-login {
-        max-width: 46vw;
+//     .container-login {
+//         max-width: 46vw;
 
-        .box{
-            width: 46vw;
+//         .box{
+//             width: 46vw;
 
 
-            input{
-                width: 28vw;
-            }
+//             input{
+//                 width: 28vw;
+//             }
 
-            .forget-password{
-                margin: 20px 0px 0px 60px
-            }
+//             .forget-password{
+//                 margin: 20px 0px 0px 60px
+//             }
             
-        }
+//         }
 
-    }
+//     }
 
 
-}
-@media only screen and (max-width: 700px){
+// }
+// @media only screen and (max-width: 700px){
 
-    .container-login {
+//     .container-login {
         
         
-        max-width: 50vw;
+//         max-width: 50vw;
 
-        .box{
-            width: 50vw;
+//         .box{
+//             width: 50vw;
 
 
-            input{
-                width: 28vw;
-            }
+//             input{
+//                 width: 28vw;
+//             }
 
-            .forget-password{
-                margin: 20px 0px 0px 65px
-            }
+//             .forget-password{
+//                 margin: 20px 0px 0px 65px
+//             }
             
-        }
+//         }
 
-    }
+//     }
 
 
-}
+// }
