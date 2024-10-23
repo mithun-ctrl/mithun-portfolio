@@ -134,7 +134,7 @@ $secondary-text-color: #7e2828;
 
 }
 
-@media (max-width: 320px) {
+@media (max-width: 400px) {
 
     .box{
         width: 100%;
@@ -157,6 +157,7 @@ $secondary-text-color: #7e2828;
 
             .btn-login{
                 margin: 20px auto 50px auto;
+                max-width: 95%;
 
                 .btn{
                     transition: none;
