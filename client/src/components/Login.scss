@@ -106,7 +106,7 @@ $secondary-text-color: #7e2828;
     .box{
         width: 90%;
         box-shadow: none;
-        margin-top: 50px;
+        margin-top: 20px;
         .form-login{
             
             input{
@@ -133,4 +133,42 @@ $secondary-text-color: #7e2828;
     }
 
 }
+
+@media (max-width: 320px) {
+
+    .box{
+        width: 100%;
+        box-shadow: none;
+        margin-top: 10px;
+        .form-login{
+            
+            input{
+                width: 85vw;
+                margin: auto;
+            }
+            
+            .email, .password{
+                max-width: 95%;
+                margin: 30px auto 30px auto;
+            }
+            .password{
+                margin-bottom: 10px;
+            }
+
+            .btn-login{
+                margin: 20px auto 50px auto;
+
+                .btn{
+                    transition: none;
+                }
+            }
+            .forget-password{
+                margin: 10px auto;
+                max-width:95% ;
+            }
+        }
+    }
+
+}
+
 
