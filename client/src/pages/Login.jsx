@@ -68,42 +68,39 @@ export const Login = () => {
         }
     }
     return (
-
-        <div className="container-login">
-            <div className="box">
-                <h1>Login</h1>
-                <div className="form-login">
-                    <form action="" method="POST" onSubmit={handleSubmission}>
-                        <div className="email">
-                            <label for='email'>Email</label>
-                            <input
-                                type="email"
-                                required                                
-                                name="email"
-                                value={user.email}
-                                onChange={handleInput}
-                            ></input>
-                        </div>
-                        <div className="password">
-                            <label for='email'>Password</label>
-                            <input
-                                type="password"
-                                required
-                                name="password"                               
-                                value={user.password}
-                                onChange={handleInput}
-                            ></input>
-                        </div>
-                        <div className="forget-password">
-                            <a href="#" aria-disabled>reset passowrd</a>
-                        </div>
-                        <div className="btn-login">                            
-                            <button
-                                className="btn"
-                            >Login</button>                           
-                        </div>
-                    </form>
-                </div>
+        <div className="box">
+            <h1>Login</h1>
+            <div className="form-login">
+                <form action="" method="POST" onSubmit={handleSubmission}>
+                    <div className="email">
+                        <label for='email'>Email</label>
+                        <input
+                            type="email"
+                            required
+                            name="email"
+                            value={user.email}
+                            onChange={handleInput}
+                        ></input>
+                    </div>
+                    <div className="password">
+                        <label for='email'>Password</label>
+                        <input
+                            type="password"
+                            required
+                            name="password"
+                            value={user.password}
+                            onChange={handleInput}
+                        ></input>
+                    </div>
+                    <div className="forget-password">
+                        <a href="#" aria-disabled>reset passowrd</a>
+                    </div>
+                    <div className="btn-login">
+                        <button
+                            className="btn"
+                        >Login</button>
+                    </div>
+                </form>
             </div>
         </div>
 
