@@ -1,14 +1,8 @@
 import { NavLink } from "react-router-dom"
-import { useState } from 'react';
 import './Navbar.scss';
 import { useAuth } from "../store/auth";
 
 export const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
     const { isLoggedIn } = useAuth();
     return (
         <>
@@ -17,11 +11,11 @@ export const Navbar = () => {
                     <div id="logo-box">
                         <NavLink id="logo" to="/">Mithun</NavLink>
                     </div>
-                    <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-                        <li><NavLink to="/" onClick={() => setIsMenuOpen(false)}>Home</NavLink></li>
-                        <li><NavLink to="/achievement" onClick={() => setIsMenuOpen(false)}>Achievement</NavLink></li>
-                        <li><NavLink to="/about" onClick={() => setIsMenuOpen(false)}>About</NavLink></li>
-                        <li><NavLink to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</NavLink></li>
+                    <ul className="nav-links">
+                        <li><NavLink to="/" >Home</NavLink></li>
+                        <li><NavLink to="/achievement" >Achievement</NavLink></li>
+                        <li><NavLink to="/about" >About</NavLink></li>
+                        <li><NavLink to="/contact" >Contact</NavLink></li>
 
                     </ul>
                     <div id="login-reg-box">
@@ -41,7 +35,7 @@ export const Navbar = () => {
                             )}
                         </ul>
                     </div>
-                    <button className="mobile-menu-btn" onClick={toggleMenu}>
+                    <button className="mobile-menu-btn" >
                         <span></span>
                         <span></span>
                         <span></span>
