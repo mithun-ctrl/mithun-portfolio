@@ -1,17 +1,13 @@
-$primary-background-color: #FFFFFF;
-$primary-text-color: #6200EE;
-$secondary-background-color: #B00020;
-$secondary-text-color: #000000;
+$white: #FFFFFF;
+$blue: #6200EE;
+$red: #B00020;
+$dark-brown: #7e2828;
 
 :root{
-    background-color: $primary-background-color;
+    background-color: $white;
     text-rendering: optimizeSpeed;
 }
 
-header {
-    width: 100%;
-    background-color: rgba($primary-background-color, 0.95);
-}
 
 #box-navbar{
     overflow: visible;
@@ -19,33 +15,30 @@ header {
     display: flex;
     align-items: center;
     margin-top: 10px;
-    padding: 5px 20px;
+    padding: 5px 5px 5px 5px;
     max-width: 1400px;
     margin: 10px auto;
     
     #logo-box{
-        margin: 0 50px 0 100px;
+        margin: 0 130px 0 40px;
         padding: 0 20px;
         #logo{
-            color: $primary-background-color;
+            color: $white;
             font-size: 30px;
             font-weight: 900;
             text-decoration: none;
-            -webkit-text-stroke: $secondary-text-color 1px;
+            -webkit-text-stroke: $dark-brown 1px;
             text-transform: uppercase;
             letter-spacing: 3px;
             padding: 1px 2px 1px 5px;   
-            border: 2px solid $primary-background-color;
+            border: 2px solid $white;
             transition: 0.3s ease-in-out;
-
-            &:hover{
-                border: 2px solid $secondary-text-color;
-            }
         }
     }
 
     #login-reg-box{
         display: flex;
+        margin-left: 120px;
         margin-right: 50px;
         padding: 5px 20px 13px;
         border-radius: 100px;
@@ -53,7 +46,7 @@ header {
         ul{
             margin: 10px 8px 3px 8px;
             display: flex;
-            background-color: $primary-background-color;
+            background-color: $white;
             gap: 15px;
             
             li{
@@ -61,7 +54,7 @@ header {
                 a{
                     max-width: fit-content;
                     text-decoration: none;
-                    color: $secondary-text-color;
+                    color: $dark-brown;
                     position: relative;
 
                     &:not(.register)::after {
@@ -71,7 +64,7 @@ header {
                         height: 2px;
                         bottom: -4px;
                         left: 0;
-                        background-color: $primary-text-color;
+                        background-color: $blue;
                         transition: width 0.3s ease;
                     }
 
@@ -81,8 +74,8 @@ header {
                 }
 
                 .register{
-                    background-color: $secondary-text-color;
-                    color: $primary-background-color;
+                    background-color: $dark-brown;
+                    color: $white;
                     padding: 11px;
                     text-wrap: nowrap;
                     border-radius: 100px;
@@ -107,7 +100,7 @@ header {
 
             a{
                 text-decoration: none;
-                color: $secondary-text-color;
+                color: $dark-brown;
                 transition: 0.4s;
                 position: relative;
 
@@ -118,12 +111,12 @@ header {
                     height: 2px;
                     bottom: -4px;
                     left: 0;
-                    background-color: $primary-text-color;
+                    background-color: $blue;
                     transition: width 0.3s ease;
                 }
 
                 &:hover{
-                    color: $primary-text-color;
+                    color: $blue;
                 }
 
                 &:hover::after {
@@ -133,120 +126,5 @@ header {
             }
         }
     }
-
-    .mobile-menu-btn {
-        display: none;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 10px;
-        
-        span {
-            display: block;
-            width: 25px;
-            height: 2px;
-            background-color: $primary-text-color;
-            margin: 5px 0;
-            transition: all 0.3s ease;
-        }
-    }
 }
 
-// .blue{
-//     background-color: #d22828;
-//     color: #598b13;
-// }
-
-@media screen and (max-width: 1200px) {
-    #box-navbar {
-        padding: 15px;
-        
-        #logo-box {
-            margin: 0 30px;
-        }
-        
-        .nav-links {
-            margin: 0 40px;
-            padding: 13px 15px;
-            
-            li {
-                margin: auto 15px;
-            }
-        }
-
-        #login-reg-box {
-            margin-right: 30px;
-        }
-    }
-}
-
-@media screen and (max-width: 992px) {
-    #box-navbar {
-        justify-content: space-between;
-        padding: 15px 20px;
-        
-        .mobile-menu-btn {
-            display: block;
-            order: 3;
-        }
-        
-        #logo-box {
-            order: 1;
-            margin: 0;
-        }
-        
-        .nav-links {
-            position: absolute;
-            top: 100%;
-            left: -100%;
-            width: 100%;
-            flex-direction: column;
-            background-color: $primary-background-color;
-            transition: 0.3s;
-            margin: 0;
-            padding: 20px;
-            border-radius: 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            
-            &.active {
-                left: 0;
-            }
-            
-            li {
-                margin: 15px 0;
-                text-align: center;
-            }
-        }
-        
-        #login-reg-box {
-            order: 2;
-            margin: 0;
-            
-            ul {
-                margin-top: 0;
-                
-                .register-li {
-                    display: none;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 576px) {
-    #box-navbar {
-        padding: 10px 15px;
-        
-        #logo-box #logo {
-            font-size: 18px;
-        }
-        
-        #login-reg-box {
-            padding: 5px 10px;
-            
-            ul {
-                gap: 10px;
-            }
-        }
-    }
-}
