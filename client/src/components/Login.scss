@@ -31,6 +31,10 @@ $secondary-text-color: #7e2828;
             color: $secondary-text-color;
             transition: 0s;
 
+            &::placeholder{
+                color: color.scale($dark-brown, $lightness: 50%);
+            }
+
             &:focus {
 
                 border: 2px solid #c49cfb;
