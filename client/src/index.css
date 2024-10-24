@@ -222,3 +222,264 @@ body {
     color: #ffffff;
   }
 }
+
+
+
+
+
+
+/* responsive design for register and login */
+
+@media screen and (max-width: 1150px) {
+  /*login-page*/
+
+  .box {
+    width: 40%;
+    box-shadow: none;
+    margin: 20px auto 120px auto;
+
+    .form-login {
+
+      input {
+        width: 26.5vw;
+        margin: auto;
+      }
+
+      .email,
+      .password {
+        max-width: 72%;
+        margin: 30px auto 30px auto;
+      }
+
+      .password {
+        margin-bottom: 10px;
+      }
+
+      .btn-login {
+        margin: 20px auto 50px auto;
+
+        .btn {
+          transition: none;
+          border: 3px solid #FFFFFF;
+
+          &:focus {
+            border: 3px solid #c49cfb;
+          }
+        }
+      }
+
+      .forget-password {
+        margin: 10px auto;
+        max-width: 72%;
+      }
+    }
+  }
+
+  /*register-page */
+
+  .box-reg {
+    box-shadow: none;
+    width: 40%;
+    margin: 20px auto 120px auto;
+
+    input {
+      width: 26.5vw;
+      margin: auto;
+    }
+
+    .reg-form {
+
+      .reg-email,
+      .reg-password,
+      .username {
+        max-width: 72%;
+        margin: 0px auto 20px auto;
+      }
+
+      .reg-btn {
+        max-width: 72%;
+
+        .rbtn {
+          transition: none;
+          border: 3px solid #FFFFFF;
+
+          &:focus {
+            border: 3px solid #c49cfb;
+          }
+        }
+      }
+
+    }
+
+  }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .box {
+    width: 90%;
+    box-shadow: none;
+    margin-top: 20px;
+
+    .form-login {
+
+      input {
+        width: 60vw;
+        margin: auto;
+      }
+
+      .email,
+      .password {
+        max-width: 72%;
+        margin: 30px auto 30px auto;
+      }
+
+      .password {
+        margin-bottom: 10px;
+      }
+
+      .btn-login {
+        margin: 20px auto 50px auto;
+
+        .btn {
+          transition: none;
+          border: 3px solid #FFFFFF;
+
+          &:focus {
+            border: 3px solid #c49cfb;
+          }
+        }
+      }
+
+      .forget-password {
+        margin: 10px auto;
+        max-width: 72%;
+      }
+    }
+  }
+
+  /*register-page */
+
+  .box-reg {
+    box-shadow: none;
+    width: 90%;
+    margin: 20px auto 120px auto;
+    input {
+      width: 60vw;
+      margin: auto;
+    }
+
+    .reg-form {
+
+      .reg-email,
+      .reg-password,
+      .username {
+        max-width: 72%;
+        margin: 0px auto 20px auto;
+      }
+
+      .reg-btn {
+        max-width: 72%;
+
+        .rbtn {
+          transition: none;
+          border: 3px solid #FFFFFF;
+
+          &:focus {
+            border: 3px solid #c49cfb;
+          }
+        }
+      }
+
+    }
+
+  }
+
+
+}
+
+@media screen and (max-width: 400px) {
+
+  .box {
+    width: 100%;
+    box-shadow: none;
+    margin-top: 10px;
+
+    .form-login {
+
+      input {
+        width: 85vw;
+        margin: auto;
+      }
+
+      .email,
+      .password {
+        max-width: 95%;
+        margin: 30px auto 30px auto;
+      }
+
+      .password {
+        margin-bottom: 10px;
+      }
+
+      .btn-login {
+        margin: 20px auto 50px auto;
+        max-width: 95%;
+
+        .btn {
+          transition: none;
+
+          &:focus {
+            border: 3px solid #c49cfb;
+          }
+        }
+      }
+
+      .forget-password {
+        margin: 10px auto;
+        max-width: 95%;
+      }
+    }
+  }
+
+  /*register-page*/
+
+
+  .box-reg {
+    box-shadow: none;
+    width: 100%;
+    margin: 20px auto 120px auto;
+    input {
+      width: 85vw;
+      margin: auto;
+    }
+
+    .reg-form {
+
+      .reg-email,
+      .reg-password,
+      .username {
+        max-width: 95%;
+        margin: 0px auto 20px auto;
+      }
+
+      .reg-btn {
+        max-width: 95%;
+
+        .rbtn {
+          transition: none;
+          border: 3px solid #FFFFFF;
+
+          &:focus {
+            border: 3px solid #c49cfb;
+          }
+        }
+      }
+
+    }
+
+  }
+
+}
