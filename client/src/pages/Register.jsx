@@ -6,7 +6,7 @@ import { toast } from 'react-hot-toast';
 import AOS from 'aos';
 AOS.init();
 
-const URL = "http://localhost:5000/api/auth/register";
+const URL = "https://mithun-portfolio-production.up.railway.app/api/auth/register";
 
 export const Register = () => {
 
