@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
@@ -15,35 +15,41 @@ import { AdminContacts } from "./pages/AdminContacts";
 import { ProtectedRoutes } from "./pages/ProtectedRoutes";
 import { AdminAccess } from "./pages/AdminAccess";
 
-const App = () => {
+const PageWrapper = () => {
+  const location = useLocation();
+  const hideFooterPaths = ['/login', '/register'];
+  const ShowFooter = !hideFooterPaths.includes(location.pathname);
+
   return (
     <>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-
-          <Route path="/" element={<Home />} />
-          <Route element={<ProtectedRoutes />}>
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/achievement" element={<Achievement />} />
-            <Route path="/admin" element={<AdminLayout />} />
-            <Route path="/admin/users" element={<AdminUsers />} />
-            <Route path="/admin/contacts" element={<AdminContacts />} />
-            <Route path="/admin/access" element={<AdminAccess />} />
-          </Route>
-          <Route path="/login" element={<Login />} />
-          <Route path="/logout" element={<Logout />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="*" element={<Error />} />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route element={<ProtectedRoutes />}>
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/achievement" element={<Achievement />} />
           <Route path="/admin" element={<AdminLayout />} />
           <Route path="/admin/users" element={<AdminUsers />} />
           <Route path="/admin/contacts" element={<AdminContacts />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+          <Route path="/admin/access" element={<AdminAccess />} />
+        </Route>
+        <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<Logout />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+      {ShowFooter && <Footer />}
     </>
-  )
-}
+  );
+};
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <PageWrapper />
+    </BrowserRouter>
+  );
+};
 
 export default App;
