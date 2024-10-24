@@ -41,7 +41,7 @@ export const Footer = () => {
           <h4>Quick Links</h4>
           <ul className='quick-links'>
             <li><a href="/">Home</a></li>
-            <li><a href="/services">Services</a></li>
+            <li><a href="/achievement">Achievement</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>
