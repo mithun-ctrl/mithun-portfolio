@@ -502,8 +502,8 @@ body {
       
       .error-404{
         img{
-          width: 56vw;
-          height: auto;
+          width: auto;
+          height: 30vh;
         }
 
         p{
