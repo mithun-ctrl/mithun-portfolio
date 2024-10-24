@@ -77,7 +77,7 @@ export const Login = () => {
                         <input
                             type="email"
                             required
-                            placehlder="Enter Email"
+                            placeholder="Enter Email"
                             name="email"
                             value={user.email}
                             onChange={handleInput}
@@ -88,7 +88,7 @@ export const Login = () => {
                         <input
                             type="password"
                             required
-                            placehlder="Enter Password"
+                            placeholder="Enter Password"
                             name="password"
                             value={user.password}
                             onChange={handleInput}
