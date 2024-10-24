@@ -486,6 +486,52 @@ body {
 
 /* error responsive page   */
 
+@media screen and (max-width: 1150px){
+
+  .container-error{
+    margin: 90px auto 70px auto;
+    .left-box-error{
+      margin: 5px;
+      img{
+        width: auto;
+        height: 50vh;
+      }
+    }
+
+    .right-box-error{
+      
+      .error-404{
+        img{
+          width: 56vw;
+          height: auto;
+        }
+
+        p{
+          width: auto;
+        }
+
+      }
+
+      ul{
+
+        li{
+
+          a{
+            border: 3px solid #FFFFFF;
+
+            &:focus{
+              border: 3px solid #c49cfb;
+            }
+          }
+
+        }
+      }
+
+    }
+  }
+
+}
+
 @media screen and (max-width: 400px){
   
   .container-error{
@@ -539,49 +585,4 @@ body {
 
 }
 
-@media screen and (max-width: 1150px){
-
-  .container-error{
-    margin: 90px auto 70px auto;
-    .left-box-error{
-      margin: 5px;
-      img{
-        width: auto;
-        height: 50vh;
-      }
-    }
-
-    .right-box-error{
-      
-      .error-404{
-        img{
-          width: 56vw;
-          height: auto;
-        }
-
-        p{
-          width: auto;
-        }
-
-      }
-
-      ul{
-
-        li{
-
-          a{
-            border: 3px solid #FFFFFF;
-
-            &:focus{
-              border: 3px solid #c49cfb;
-            }
-          }
-
-        }
-      }
-
-    }
-  }
-
-}
  
