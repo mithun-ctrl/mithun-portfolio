@@ -1,113 +1,98 @@
-$primary-background-color: #FFFFFF;
+$white: #FFFFFF;
 $primary-text-color: #6200EE;
-$secondary-background-color: #B00020;
-$secondary-text-color: #7e2828;
+$dark-brown: #7e2828;
+@use "sass:color";  
 
-
-
-.container-register {
-    background-color: $primary-background-color;
-    max-height: 72vh;
-    max-width: 33vw;
-    margin: 70px auto 100px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    box-shadow: 0px 2px 20px -9px $secondary-text-color;
-    font-family: "Poppins", sans-serif;
+.box-reg {
+    background-color: $white;
+    max-height: 70vh;
+    width: 30vw;
+    margin-left: 0px;
     border-radius: 15px;
+    margin: 80px auto 120px auto;
+    box-shadow: 0px 2px 20px -9px $dark-brown;
+    label {
+        display: block;
+        margin-bottom: 10px;
+        color: $dark-brown;
+    }
 
-    .box-reg-left {
-        background-color: $primary-background-color;
-        min-height: 72vh;
-        width: 33vw;
-        margin-left: 0px;
-        border-radius: 15px;
+    input {
+        width: 20vw;
+        outline: none;
+        padding: 10px 20px 10px 5px;
+        border: 2px solid $dark-brown;
+        font-size: 15px;
+        font-weight: 500;
+        border-radius: 5px;
+        color: $dark-brown;
 
-        label {
-            display: block;
-            margin-bottom: 10px;
+        &::placeholder {
+            color: color.scale($dark-brown, $lightness: 50%);
         }
 
-        input {
-            width: 18vw;
-            outline: none;
-            padding: 10px 20px 10px 5px;
-            border: 2px solid $secondary-text-color;
-            font-size: 15px;
-            font-weight: 500;
-            border-radius: 5px;
-            color: $secondary-text-color;
-
-            &::placeholder {
-                color: $secondary-text-color;
-                position: relative;
-                left: 0;
-                font-family: "Poppins", sans-serif;
-            }
-
-            &:focus {
-                border: 2px solid #c49cfb;
-            }
+        &:focus {
+            border: 2px solid #c49cfb;
         }
+    }
 
-        h1 {
+    h1 {
+        margin: auto;
+        margin-top: 20px;
+        max-width: fit-content;
+        font-weight: 700;
+        font-size: 35px;
+        color: $dark-brown;
+    }
+
+    .reg-form {
+        margin-top: 30px;
+
+        .username {
+            max-width: 70%;
             margin: auto;
-            margin-top: 20px;
-            max-width: fit-content;
-            font-weight: 700;
-            font-size: 35px;
-            color: $secondary-text-color;
+            margin-bottom: 30px;
         }
 
-        .reg-form {
-            margin-top: 50px;
+        .reg-email {
+            max-width: 70%;
+            margin: auto;
+            margin-bottom: 30px;
+        }
 
-            .username {
-                max-width: fit-content;
-                margin: auto;
-                margin-bottom: 40px;
-            }
+        .reg-password {
+            max-width: 70%;
+            margin: auto;
+            margin-bottom: 35px;
+        }
 
-            .reg-email {
-                max-width: fit-content;
-                margin: auto;
-                margin-bottom: 40px;
-            }
+        .reg-btn {
+            max-width: 70%;
+            margin: 10px auto 30px auto;
 
-            .reg-password {
-                max-width: fit-content;
-                margin: auto;
-                margin-bottom: 40px;
-            }
+            .rbtn {
+                padding: 7px 20px;
+                color: $white;
+                border-radius: 7px;
+                font-size: 20px;
+                width: 100%;
+                font-family: "Poppins", sans-serif;
+                background: linear-gradient(to right,
+                        #000000 0%,
+                        #7e2828 50%,
+                        #000000 50%,
+                        #7e2828 100%);
+                background-size: 200% 100%;
+                background-position: 0% 0%;
+                transition: background-position 0.3s ease-in-out;
 
-            .reg-btn {
-                max-width: 30%;
-                margin: 10px auto 0px auto;
-
-                .rbtn {
-                    padding: 7px 20px;
-                    color: $primary-background-color;
-                    border-radius: 5px;
-                    font-size: 20px;
-                    width: 100%;
-                    font-family: "Poppins", sans-serif;
-                    background: linear-gradient(to right,
-                            #000000 0%,
-                            #7e2828 50%,
-                            #000000 50%,
-                            #7e2828 100%);
-                    background-size: 200% 100%;
-                    background-position: 0% 0%;
-                    transition: background-position 0.3s ease-in-out;
-
-                    &:hover {
-                        cursor: pointer;
-                        color: $primary-background-color;
-                        background-position: 100% 0%;
-                    }
+                &:hover {
+                    cursor: pointer;
+                    color: $white;
+                    background-position: 100% 0%;
                 }
             }
         }
     }
-
 }
+
