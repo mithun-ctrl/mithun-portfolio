@@ -6,7 +6,7 @@ import { toast } from 'react-hot-toast';
 import AOS from 'aos';
 AOS.init();
 
-const URL = "https://mithun-portfolio-production.up.railway.app/api/auth/register";
+const URL = "http://localhost:5000/api/auth/register";
 
 export const Register = () => {
 
@@ -66,55 +66,54 @@ export const Register = () => {
 
 
     return (
-        <section>
-            <div className="container-register">
-                <div className="box-reg-left">
-                    <h1>Sign-Up</h1>
-                    <div className='reg-form'>
-                        <form method='POST' onSubmit={handleSubmission}>
-                            <div className="username">
-                                <label htmlFor="username">Username</label>
-                                <input
-                                    name="username"
-                                    type='text'
-                                    id='usernmae'                                    
-                                    required
-                                    values={user.username}
-                                    onChange={handleInput}
-                                ></input>
-                            </div>
-                            <div className="reg-email">
-                                <label htmlFor="email">Email</label>
-                                <input
-                                    name="email"
-                                    type='email'                                    
-                                    required
-                                    id='email-reg'
-                                    values={user.email}
-                                    onChange={handleInput}
-                                ></input>
-                            </div>
-                            <div className="reg-password">
-                                <label htmlFor="password">Password</label>
-                                <input
-                                    name="password"
-                                    type='password'                                   
-                                    id='password-reg'                                    
-                                    required
-                                    values={user.password}
-                                    onChange={handleInput}
-                                ></input>
-                            </div>
-                            <div className="reg-btn">
-                                <button
-                                    type='submit'
-                                    className='rbtn'
-                                >SignUp</button>
-                            </div>
-                        </form>
+        <div className="box-reg">
+            <h1>Sign-Up</h1>
+            <div className='reg-form'>
+                <form method='POST' onSubmit={handleSubmission}>
+                    <div className="username">
+                        <label htmlFor="username">Username</label>
+                        <input
+                            name="username"
+                            type='text'
+                            id='usernmae'
+                            required
+                            placeholder='Enter Username'
+                            values={user.username}
+                            onChange={handleInput}
+                        ></input>
                     </div>
-                </div>
+                    <div className="reg-email">
+                        <label htmlFor="email">Email</label>
+                        <input
+                            name="email"
+                            type='email'
+                            placeholder='Enter Email'
+                            required
+                            id='email-reg'
+                            values={user.email}
+                            onChange={handleInput}
+                        ></input>
+                    </div>
+                    <div className="reg-password">
+                        <label htmlFor="password">Password</label>
+                        <input
+                            name="password"
+                            type='password'
+                            placeholder='Enter Password'
+                            id='password-reg'
+                            required
+                            values={user.password}
+                            onChange={handleInput}
+                        ></input>
+                    </div>
+                    <div className="reg-btn">
+                        <button
+                            type='submit'
+                            className='rbtn'
+                        >SignUp</button>
+                    </div>
+                </form>
             </div>
-        </section>
+        </div>
     )
 }
