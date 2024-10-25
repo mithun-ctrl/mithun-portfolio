@@ -48,6 +48,7 @@ $secondary-text-color: #7e2828;
                     font-weight: 500;
                     letter-spacing: 0.5px;
                     line-height: 30px;
+                    color: #7e2828;
                     span{
                         font-size: 18px;
                         font-weight: 600;
@@ -80,7 +81,7 @@ $secondary-text-color: #7e2828;
 
 }
 
-@media only screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
     
     .container-achievement {
         max-width: 100%;
