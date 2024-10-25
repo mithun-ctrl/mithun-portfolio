@@ -71,8 +71,8 @@ export const Footer = () => {
         <div className="footer-section">
           <h4>Contact Info</h4>
           <p>Email: itsmithun01@gmail.com</p>
-          <p>Phone: +918707300485</p>
-          <p>Address: Korsand Street, Prayagraj, India</p>
+          <p>Phone: +918707xxx485</p>
+          <p>Address: Prayagraj, Uttar Pradesh India</p>
         </div>
       </div>
 
