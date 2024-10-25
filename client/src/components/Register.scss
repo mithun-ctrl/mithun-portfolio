@@ -49,38 +49,39 @@ $dark-brown: #7e2828;
         margin-top: 30px;
 
         .username {
-            max-width: 70%;
+            max-width: 73%;
             margin: auto;
             margin-bottom: 30px;
         }
 
         .reg-email {
-            max-width: 70%;
+            max-width: 73%;
             margin: auto;
             margin-bottom: 30px;
         }
 
         .reg-password {
-            max-width: 70%;
+            max-width: 73%;
             margin: auto;
             margin-bottom: 35px;
         }
 
         .reg-btn {
-            max-width: 70%;
-            margin: 10px auto 30px auto;
+            max-width: 75%;
+            margin: 10px auto 45px auto;
 
             .rbtn {
                 padding: 7px 20px;
+                border: none;
                 color: $white;
                 border-radius: 7px;
                 font-size: 20px;
                 width: 100%;
                 font-family: "Poppins", sans-serif;
                 background: linear-gradient(to right,
-                        #000000 0%,
+                        #798645 0%,
                         #7e2828 50%,
-                        #000000 50%,
+                        #798645 50%,
                         #7e2828 100%);
                 background-size: 200% 100%;
                 background-position: 0% 0%;
