@@ -48,18 +48,12 @@ $secondary-text-color: #7e2828;
     .introduction-image-box,
     .skill-image-box {
         margin-left: 100px;
-        transform: rotate(-5deg);
-        transition: 0.3s;
-        
+               
         img {
             height: 70vh;
             width: 36vw;
             object-fit: cover;
             border-radius: 10px;
-        }
-
-        &:hover {
-            transform: rotate(0deg);
         }
     }
 
@@ -68,18 +62,12 @@ $secondary-text-color: #7e2828;
     .hobby-image-box {
         margin-left: auto;
         margin-right: 6rem;
-        transform: rotate(5deg);
-        transition: 0.3s;
-        
+              
         img {
             height: 70vh;
             width: 35vw;
             object-fit: cover;
             border-radius: 10px;
-        }
-
-        &:hover {
-            transform: rotate(0deg);
         }
     }
 
@@ -87,8 +75,7 @@ $secondary-text-color: #7e2828;
     .introduction-text-box,
     .skill-text-box {
         margin-left: 40px;
-        transition: 0.3s;
-        
+                
         .introduction-heading, .skill-heading {
             h1 {
                 @include heading-style;
