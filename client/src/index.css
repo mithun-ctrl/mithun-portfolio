@@ -277,13 +277,13 @@ body {
 
   /*register-page */
 
-  .box-reg {
+ .box-reg {
     box-shadow: none;
     width: 40%;
     margin: 20px auto 120px auto;
 
     input {
-      width: 26.5vw;
+      width: 26vw;
       margin: auto;
     }
 
@@ -297,7 +297,7 @@ body {
       }
 
       .reg-btn {
-        max-width: 72%;
+        max-width: 74%;
 
         .rbtn {
           transition: none;
@@ -447,27 +447,30 @@ body {
   /*register-page*/
 
 
-  .box-reg {
+ .box-reg {
     box-shadow: none;
+    max-height: 70vh;
     width: 100%;
-    margin: 20px auto 120px auto;
+    margin: 50px auto 120px auto;
+    
     input {
       width: 85vw;
       margin: auto;
     }
 
     .reg-form {
-
+      margin: 20px auto 0px auto;
+      
       .reg-email,
       .reg-password,
       .username {
-        max-width: 95%;
+        max-width: 92%;
         margin: 0px auto 20px auto;
       }
 
       .reg-btn {
-        max-width: 95%;
-
+        max-width: 94%;
+        margin: auto;
         .rbtn {
           transition: none;
           border: 3px solid #FFFFFF;
