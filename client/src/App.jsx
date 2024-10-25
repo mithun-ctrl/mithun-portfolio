@@ -13,6 +13,7 @@ import { AdminLayout } from "./components/Layout/AdminLayout";
 import { AdminUsers } from "./pages/AdminUsers";
 import { AdminContacts } from "./pages/AdminContacts";
 import { ProtectedRoutes } from "./pages/ProtectedRoutes";
+import { LoginProtectedRoute } from "./pages/LoginProtectedRoute";
 import { AdminAccess } from "./pages/AdminAccess";
 
 const PageWrapper = () => {
@@ -34,9 +35,11 @@ const PageWrapper = () => {
           <Route path="/admin/contacts" element={<AdminContacts />} />
           <Route path="/admin/access" element={<AdminAccess />} />
         </Route>
+        <Route element = {<LoginProtectedRoute />}>
         <Route path="/login" element={<Login />} />
-        <Route path="/logout" element={<Logout />} />
         <Route path="/register" element={<Register />} />
+        </Route>
+        <Route path="/logout" element={<Logout />} />
         <Route path="*" element={<Error />} />
       </Routes>
       {ShowFooter && <Footer />}
