@@ -584,4 +584,50 @@ body {
 
 }
 
+
+
+/* contact-page responsive design  */
+
+@media screen and (max-width: 1000px){
+
+  .container-contact{
+    margin-top: 100px;
+    
+    .box-contact-img{
+      margin-left: auto;
+      max-width: 35rem;
+      img{
+        width: 30rem;
+        height: 30rem;
+      }
+    }
+
+    .box-contact-form{
+      margin-left: 40px;
+      min-width: 45vw;
+
+      input{
+        width: 30vw;
+      }
+
+      textarea{
+        width: 40vw;
+      }
+
+      .btn-contact{
+
+        button{
+          border: 3px solid #ffffff;
+          
+          &:focus{
+            border: 3px solid #c49cfb;
+          }
+        }
+      }
+      
+    }
+  }
+
+}
+
  
