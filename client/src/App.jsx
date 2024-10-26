@@ -18,7 +18,7 @@ import { AdminAccess } from "./pages/AdminAccess";
 
 const PageWrapper = () => {
   const location = useLocation();
-  const hideFooterPaths = ['/login', '/register'];
+  const hideFooterPaths = ['/login', '/register', '/contact'];
   const ShowFooter = !hideFooterPaths.includes(location.pathname);
 
   return (
