@@ -123,13 +123,6 @@ export const Contact = () => {
                     </form>
                 </div>
             </div>
-            <div className='location'>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7200.574572583879!2d81.8498533431761!3d25.52880570999563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399ac9f6b766558f%3A0x208357882660d69f!2sShantipuram%2C%20Phaphamau%2C%20Uttar%20Pradesh%20211013!5e0!3m2!1sen!2sin!4v1727887931980!5m2!1sen!2sin"
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
         </section>
     )
 }
