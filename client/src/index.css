@@ -630,7 +630,7 @@ body {
 
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 895px) {
   .heading-contact{
     margin: 50px 10px 0px 20px;
   }
@@ -640,11 +640,13 @@ body {
     margin-top: 0px;
 
     .box-contact-img{
-      margin: 0px auto 30px auto;
+      margin: auto;
       max-width: 100%;
+      
       img{
-        height: 20rem;
+        margin: auto auto;
         width: auto;
+        height: 20rem;
       }
     }
 
