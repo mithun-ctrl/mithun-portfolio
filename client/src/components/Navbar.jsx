@@ -33,7 +33,7 @@ export const Navbar = () => {
                     <div id="login-reg-box">
                         <ul>
                             {isLoggedIn ? (
-                                <li><NavLink to="/logout" onClick={() => setShowMenu(false)}>Logout</NavLink></li>
+                                <li className="logout-nav"><NavLink to="/logout" onClick={() => setShowMenu(false)}>Logout</NavLink></li>
                             ) : (
                                 <>
                                     <li className="login-nav"><NavLink to="/login" onClick={() => setShowMenu(false)}>Login</NavLink></li>
