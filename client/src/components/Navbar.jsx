@@ -36,7 +36,7 @@ export const Navbar = () => {
                                 <li><NavLink to="/logout" onClick={() => setShowMenu(false)}>Logout</NavLink></li>
                             ) : (
                                 <>
-                                    <li><NavLink to="/login" onClick={() => setShowMenu(false)}>Login</NavLink></li>
+                                    <li className="login-nav"><NavLink to="/login" onClick={() => setShowMenu(false)}>Login</NavLink></li>
                                     <li className="register-li">
                                         <NavLink className="register" to="/register" onClick={() => setShowMenu(false)}>
                                             Get Started
