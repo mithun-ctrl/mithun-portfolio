@@ -76,11 +76,11 @@ export const Contact = () => {
             </div>
             <div className="container-contact">
                 <div className="box-contact-img">
-                    <img src={contactImage} alt='contact' data-aos="fade-up" data-aos-duration="1200" />
+                    <img src={contactImage} alt='contact' />
                 </div>
                 <div className="box-contact-form">
                     <form method='POST' onSubmit={handleSubmission}>
-                        <div className="username-contact" data-aos="fade-left" data-aos-delay="300">
+                        <div className="username-contact" >
                             <label>Username</label>
                             <input
                                 type="text"
@@ -91,7 +91,7 @@ export const Contact = () => {
                                 onChange={handleInput}
                             />
                         </div>
-                        <div className="email-contact" data-aos="fade-left" data-aos-delay="600">
+                        <div className="email-contact" >
                             <label>Email</label>
                             <input
                                 type="email"
@@ -102,7 +102,7 @@ export const Contact = () => {
                                 onChange={handleInput}
                             />
                         </div>
-                        <div className="message-contact" data-aos="fade-left" data-aos-delay="900">
+                        <div className="message-contact">
                             <label>Message</label>
                             <textarea
                                 name="message"
